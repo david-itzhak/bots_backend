@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.validation.constraints.*;
 
@@ -13,12 +14,10 @@ import javax.validation.constraints.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@ToString
 public class BoatDto {
 
-    @Size(min = 3, max = 200)
-    @NotEmpty
-    @NotNull
-    @JsonProperty(value = "id", required = true)
+    @JsonProperty(value = "id", required = false)
     public String id;
 
     @Size(min = 3, max = 200)
@@ -79,5 +78,4 @@ public class BoatDto {
         @NotNull
         Integer year;
     }
-
 }

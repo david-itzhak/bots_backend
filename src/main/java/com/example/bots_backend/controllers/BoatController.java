@@ -1,7 +1,6 @@
 package com.example.bots_backend.controllers;
 
 import com.example.bots_backend.dto.request.BoatDto;
-import com.example.bots_backend.dto.results.AddBoatStatus;
 import com.example.bots_backend.dto.results.BoatResult;
 import com.example.bots_backend.services.BoatService;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +13,7 @@ import java.util.List;
 /**
  * @author Dmitry Itskov
  */
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequiredArgsConstructor
 @Log4j2
@@ -25,14 +24,17 @@ public class BoatController {
 
     private final BoatService boatService;
 
+    @CrossOrigin
     @PostMapping(value = NEW_BOAT_URL, produces = "application/json")
-    public AddBoatStatus createBot(@Valid @RequestBody BoatDto boatDto) {
-        AddBoatStatus res = new AddBoatStatus(boatService.createBoat(boatDto));
-        return res;
+    public BoatResult createBot(@Valid @RequestBody BoatDto boatDto) {
+        return boatService.createBoat(boatDto);
     }
 
+    @CrossOrigin
     @GetMapping(value = BOATS_URL, produces = "application/json")
     public List<BoatResult> getAllBot() {
         return boatService.getAllBoat();
     }
+
 }
+

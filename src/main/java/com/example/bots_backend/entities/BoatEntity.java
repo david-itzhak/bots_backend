@@ -17,6 +17,7 @@ import javax.persistence.*;
 public class BoatEntity {
 
     @Id
+    @Column(name = "id")
     String id;
 
     @Column(name = "name", nullable = false)
