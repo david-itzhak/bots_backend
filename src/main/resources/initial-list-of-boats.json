@@ -1,0 +1,58 @@
+[
+  {
+    "id": "boat1-ass343eew3red5",
+    "name": "Little Marie",
+    "shipyard": {
+      "name": "Algomar Yachts",
+      "country": "Turkey"
+    },
+    "model": {
+      "model": "Karia 31",
+      "year": "2006"
+    },
+    "size": 31,
+    "type": 1
+  },
+  {
+    "id": "boat2-ass343eewwere23",
+    "name": "May",
+    "shipyard": {
+      "name": "Beneteau",
+      "country": "France"
+    },
+    "model": {
+      "model": "Oceanis 30SE",
+      "year": "1982"
+    },
+    "size": 30,
+    "type": 1
+  },
+  {
+    "id": "boat3-ass343ee333were23",
+    "name": "Big Chico",
+    "shipyard": {
+      "name": "Lagoon",
+      "country": "France"
+    },
+    "model": {
+      "model": "Lagoon 40 Performance",
+      "year": "2010"
+    },
+    "size": 40,
+    "type": 3
+  },
+  {
+    "id": "boat4-ass343e53were523",
+    "name": "La Brigade",
+    "shipyard": {
+      "name": "Sea Ray",
+      "country": "Holland"
+    },
+    "model": {
+      "model": "Sea Ray 29",
+      "year": "2012"
+    },
+    "size": 29,
+    "type": 2
+  }
+]
